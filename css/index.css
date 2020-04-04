@@ -1,0 +1,124 @@
+html {
+  overflow: hidden;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: white;
+}
+
+.messages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: scroll;
+  max-height: calc(100vh - 80px);
+  transition: 1s all;
+}
+
+.bubble {
+  border-radius: 10px;
+  background-color: #2f7ae1;
+  width: 90vw;
+  min-height: 150px !important;
+  text-align: center;
+  font-size: 25px;
+  vertical-align: middle;
+  line-height: 150px;
+  margin-bottom: 20px;
+  overflow-y: scroll;
+  overflow-x: auto;
+  word-break: break-all;
+}
+.message {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 40px;
+  color: black;
+}
+
+.copy {
+  font-size: 40px;
+  margin-top: 5px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #001f3f;
+  transition: color 0.5s;
+}
+.copy:hover {
+  color: #000d1a;
+}
+.copy:active {
+  color: #000000;
+}
+
+.input-div {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  margin: 0.5% 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#input {
+  height: 80%;
+  width: 80vw;
+  font-size: 3vh;
+  border-radius: 5px;
+  border: 1px #2f7ae1 solid;
+  transition: border 0.5s;
+}
+#input:hover,
+#input:active,
+#input:focus {
+  outline: none;
+}
+#input:hover {
+  border-color: rgb(0, 195, 255);
+}
+#input:focus {
+  border-color: rgb(0, 0, 0);
+}
+
+#submit {
+  font-size: 60px;
+  line-height: 40px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #2f7ae1;
+  transition: color 0.5s;
+}
+
+#submit:hover {
+  color: rgb(11, 79, 173);
+  cursor: pointer;
+}
+#submit:active {
+  color: rgb(2, 30, 70);
+}
+
+.red-placeholder:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: red;
+}
+
+.red-placeholder::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: red;
+}
+.red-placeholder::placeholder {
+  color: red;
+  opacity: 1;
+}
