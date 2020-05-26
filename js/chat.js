@@ -62,7 +62,7 @@ function generateBubble(content) {
 
   let text = document.createElement("text");
   text.classList.add("text");
-  text.innerText = content;
+  text.innerText = unescape(content);
 
   let enter = document.createElement("br");
 
